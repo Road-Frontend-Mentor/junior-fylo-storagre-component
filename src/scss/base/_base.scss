@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  margin: 0;
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: rem(32px);
+  font-family: $main-font;
+  background-size: cover;
+
+  @include from($desktop) {
+    justify-content: center;
+    background-image: url(../images/bg-desktop.png);
+    background-color: $very-dark-blue;
+    background-position: bottom;
+    background-size: contain;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
